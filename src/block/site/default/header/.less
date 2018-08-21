@@ -1,0 +1,129 @@
+.header-block__{
+	&block{
+		position: relative;
+		overflow: hidden;
+		background-size: cover;
+		background-position: center bottom;
+		background-repeat: no-repeat;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		@media @media-point-smart {
+			background-position: right bottom;
+		}
+		@media @media-point-screen-lg {
+			padding-top: @navbar-screen;
+			//padding-bottom: @navbar-screen;
+		}
+	}
+	&container{
+		position: relative;
+		z-index: 2;
+		height: 100%;
+	}
+	&row{}
+	&cols{
+		.makeCols(12, 12);
+		&.is--slider{
+			@media @media-point-smart {
+				order: 1;
+			}
+			@media @media-point-notsmart {
+				.makeCols(7, 12);
+			}
+		}
+		&.is--note{
+			@media @media-point-notsmart {
+				.makeCols(5, 12);    
+				padding-bottom: 9vw;
+			}
+			@media @media-point-xxl {
+				padding-left: ~"calc(15px + 4.2vw)";
+			}
+		}
+	}
+	&slider{
+		position: relative;
+		max-width: 825px;
+		&::before{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 2;
+			background-repeat: no-repeat;
+			background-position: center left;
+			background-size: contain;
+			background-image: url("@{url-path-img}/bg/bg-header-slider.png");
+
+		}
+		@media @media-point-screen {
+			//margin-left: 4.5vw;
+		}
+	}
+	&panel{
+		position: relative;
+		z-index: 5;
+	}
+	&inner{
+		border-left: 2px solid @green-1f;
+		margin-bottom: 30px;
+		padding-left: 20px;
+		@media @media-point-screen {
+			padding-left: 2.2vw;
+			margin-bottom: 3.4vw;
+		}
+		
+	}
+	&heading{
+		color: @b-color-a;
+		font-weight: 300;
+		.calcFontSize(42, 72, 320, 1680);
+		.calcLineHeight(50, 80, 320, 1680);
+		margin-bottom: 25px;
+	}
+	&heading-small{
+		color: @black-a2;
+		font-size: @b-fs + 2;
+		line-height: @b-lh + 4;
+		@media @media-point-xxl {
+			max-width: 360px;
+		}
+		
+	}
+	&btn-group{		
+		@media @media-point-screen {
+			padding-left: 2.2vw;
+		}
+	}
+	&btn{
+		text-align: center;
+		.btn__item{
+			color: @black;
+		}
+	}
+	&scrollto{
+		display: none;
+		@media @media-point-screen-lg {
+			display: block;
+			position: absolute;
+			z-index: 3;
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: 2.4vw;
+			color: @white;
+			width: 28px;
+			height: 50px;
+			animation: scroll 1.5s infinite ease-in-out;
+			&:hover{
+				color: @white;
+			}
+		} 
+	}	
+	@keyframes scroll {
+		0%   {transform:translateX(-50%) translateY(0);}
+		50%   {transform:translateX(-50%) translateY(5px);}
+		100% {transform:translateX(-50%) translateY(0);}
+	}
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+	<head>
+		[[azbntple 
+			tpl="/src/block/site/default/head/.html" 
+			title=" "
+			description=" "
+		]] 		
+	</head>
+	<body class="is--index-page"> 
+		[[azbntple 
+			tpl="/src/block/site/default/navbar/.html"
+			class="navbar-site scroll"
+			navbar_prefix="navbar__"
+			navbar_mod="is--index"
+		]] 
+		<div class="content-block__wrap">
+			<div class="content-block__panel  is--header">
+				[[azbntple 
+					tpl="/src/block/site/default/header/panel.html"
+					content_prefix="content-block__"
+					block_prefix="header-block__"
+					block_heading="CrossLine"
+					block_heading_small="We erase the boundaries between the virtual and physical worlds, uniting people of different interests, professions, nationalities and religions."
+					block_bg="{{url-path-img}}/bg/bg-header.png"
+				]]
+				[[azbntple 
+					tpl="/src/block/site/default/bg/card.html"
+					block_prefix="bg-block__" 
+					block_mod="is--bg-circle-480x480"
+					block_bg="bg-circle-480x480.png"
+					block_paral=""
+				]]
+				<!--<div class="bg-block__card  is--bg-circle-480x480"
+					data-0="top[linear]:33%;  visibility[linear]: visible;" 
+					data-1200="top[linear]:-120%; visibility[linear]: hidden;"
+				>
+					<div class="bg-block__inner  is--bg-circle-480x480" style="background-image: url({{url-path-img}}/bg/bg-circle-480x480.png)"></div>
+				</div>-->
+				
+				
+				[[azbntple  
+					tpl="/src/block/site/page/index-video.html"
+					content_prefix="content-block__"
+					content_mod="is--video-index"
+					content_id="video-block"
+					block_heading_mod="is--index-heading  is--center"
+					block_heading_level="h2"
+					block_heading="Video presentation"
+				]]
+			</div>	
+			[[azbntple  
+				tpl="/src/block/site/page/index-for-you.html"
+				content_prefix="content-block__"  
+				content_mod="is--for-you"
+				content_id="{{page.for_you}}"
+				block_heading_mod="is--index-heading  is--for-you"
+				block_heading_level="h2"
+				block_heading="CrossLine for you"
+			]]
+			[[azbntple 
+				tpl="/src/block/site/default/bg/card.html"
+				block_prefix="bg-block__" 
+				block_mod="is--bg-circle-550x550"
+				block_bg="bg-circle-550x550.png"
+			]]
+			[[azbntple  
+				tpl="/src/block/site/page/index-save-time.html"
+				content_prefix="content-block__"  
+				content_mod="is--save-time"
+				content_id="block-save-time"
+				content_bg="{{url-path-img}}/bg/bg-save-time.jpg"
+				block_heading_mod="is--page-heading  is--save-time  is--white"
+				block_heading_level="h2"
+				block_heading="Save time"
+			]]
+			[[azbntple  
+				tpl="/src/block/site/page/index-create-meeting.html"
+				content_prefix="content-block__"  
+				content_mod="is--create-meeting"
+				content_id="block-create-meeting"
+				content_bg="{{url-path-img}}/bg/bg-create-meeting.jpg"
+				block_heading_mod="is--page-heading  is--create-meeting"
+				block_heading_level="h3"
+				block_heading="Create a meeting or join an existing one  in a couple of steps"
+			]]
+			[[azbntple  
+				tpl="/src/block/site/page/index-explore.html"
+				content_prefix="content-block__"  
+				content_mod="is--explore"
+				content_id="block-explore"
+				content_bg="{{url-path-img}}/bg/bg-explore.png"
+				block_heading_mod="is--page-heading  is--explore"
+				block_heading_level="h3"
+				block_heading="Explore new places"
+			]] 
+			[[azbntple  
+				tpl="/src/block/site/page/index-who-choose.html"
+				content_prefix="content-block__"  
+				content_mod="is--who-choose"
+				content_id="{{page.who_choose}}"
+				block_heading_mod="is--page-heading  is--who-choose"
+				block_heading_level="h3"
+				block_heading="Why choose Crossline?" 
+			]]
+			<div class="content-block__panel  is--header"> 
+				[[azbntple  
+					tpl="/src/block/site/page/index-philosophy.html"
+					content_prefix="content-block__"  
+					content_mod="is--philosophy"
+					content_id="{{page.philosophy}}"
+					content_bg="{{url-path-img}}/bg/bg-philosophy.png"
+					block_heading_mod="is--page-heading  is--philosophy"
+					block_heading_level="h3"
+					block_heading="Our philosophy" 
+				]]
+				[[azbntple 
+					tpl="/src/block/site/default/bg/card.html"
+					block_prefix="bg-block__" 
+					block_mod="is--bg-circle-605x605"
+					block_bg="bg-circle-605x605.png"
+				]]
+				[[azbntple  
+					tpl="/src/block/site/page/index-reviews.html"
+					content_prefix="content-block__"  
+					content_mod="is--reviews"
+					content_id="{{page.reviews}}"
+					block_heading_mod="is--page-heading  is--reviews  is--center"
+					block_heading_level="h3"
+					block_heading="Reviews of Crossline" 
+				]]	
+			</div>
+			[[azbntple  
+				tpl="/src/block/site/page/index-contacts.html"
+				content_prefix="content-block__"  
+				content_mod="is--contacts"
+				content_id="{{page.contacts}}"
+				content_bg="{{url-path-img}}/bg/bg-contacts.jpg"
+				block_heading_mod="is--page-heading  is--contacts"
+				block_heading_level="h3"
+				block_heading="Start communication<br> with crossline<br> now" 
+			]]	
+		</div>	
+		[[azbntple 
+			tpl="/src/block/site/default/footer/.html"
+			footer_prefix="footer__" 
+		]]		
+		[[azbntple tpl="/src/block/site/default/script/script.html" ]]
+	</body>
+</html>

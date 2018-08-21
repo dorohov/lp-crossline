@@ -1,0 +1,530 @@
+.content-block__{
+	&wrap{
+		position: relative;
+		overflow: hidden;		
+	}	
+	&panel{	
+		position: relative;
+		//overflow: hidden;
+		&.is--hidden{			
+			//@media @media-point-screen {
+				overflow: hidden;
+			//}
+		}
+		&.is--bg{
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		&.is--header{
+			background-color: @white-ea;
+		}
+		&.is--video-index{
+			background: linear-gradient(to bottom, 
+				fadeout(@white, 100%) 0%,
+				fadeout(@white, 100%) 84%,
+				fadeout(@white, 0%) 84%,
+				fadeout(@white, 0%) 100%);
+		}
+		&.is--save-time{
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			@media @media-point-smart {
+				&::before{
+					content: '';
+					position: absolute;
+					z-index: 1;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background-color: fadeout(@black, 40%);
+				}
+			}
+			@media @media-point-screen-lg {				
+				//background-attachment: fixed;
+			}
+		}
+		&.is--create-meeting{
+			background-color: @white-ea;
+		}
+		&.is--explore{
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			@media @media-point-screen-lg {				
+				//background-attachment: fixed;
+			}			
+		}
+		&.is--philosophy{
+			background-position: center left;
+			background-repeat: no-repeat;
+			background-size: cover;
+			@media @media-point-smart {
+				&::before{
+					content: '';
+					position: absolute;
+					z-index: 1;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background-color: fadeout(@white, 0%);
+				}
+			}
+			@media @media-point-notsmart {
+				background-position: center right;
+			}		
+		}
+		&.is--contacts{
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			@media @media-point-screen-lg {				
+				//background-attachment: fixed;
+			}			
+		}
+	}
+	&container{	
+		position: relative;
+		z-index: 5;
+		@media print{padding: 0!important}		
+		padding-top: 40px;
+		padding-bottom: 40px;
+		@media @media-point-screen {
+			padding-top: 3.2vw;
+			padding-bottom: 5.2vw;
+		}
+		&.is--dafault-page{
+			@media @media-point-screen {
+				max-width: 1045px;
+			}
+		}
+		&.is--full{
+			@media @media-point-smart {
+				min-height: ~"calc(100vh - @{navbar-xs})";
+			}
+			@media @media-point-sm {
+				min-height: ~"calc(100vh - @{navbar-sm} - @{footer-device-sm-p})";
+			}
+			@media @media-point-md1 {
+				min-height: ~"calc(100vh - @{navbar-sm} - @{footer-device-sm-l})";
+			}
+			@media @media-point-screen {					
+				min-height: ~"calc(100vh - @{navbar-screen} -  @{footer-screen})";
+			}
+			@media @media-point-md2 {
+				min-height: ~"calc(100vh - @{navbar-md} - @{footer-screen-md})";
+			}
+			@media @media-point-lg {
+				min-height: ~"calc(100vh - @{navbar-lg} - @{footer-screen-lg} )"; 
+			}
+			@media @media-point-xxl {
+				min-height: ~"calc(100vh - @{navbar-xxl} -  @{footer-screen-xxl})"; 
+			}			
+			body.is--navbar-bottom &{
+				@media @media-point-sm {
+					min-height: ~"calc(100vh - @{navbar-sm} - @{footer-device-sm-p} - @{navbar-bottom})";
+				}
+				@media @media-point-md1 {
+					min-height: ~"calc(100vh - @{navbar-sm} - @{footer-device-sm-l} -  @{navbar-bottom})";
+				}
+				@media @media-point-md2 {	
+					min-height: ~"calc(100vh - @{navbar-md} - @{footer-screen-md} - @{navbar-bottom-tabs} - @{navbar-bottom})"; 
+				}
+			}
+		}
+		&.is--nopadding{
+			padding-top: 0;
+			padding-bottom: 0;
+			min-height: inherit;
+		}
+		&.is--nopadding-top{
+			padding-top: 0;
+		}
+		&.is--nopadding-bottom{
+			padding-bottom: 0;
+		}
+		&.is--overflow{
+			overflow: hidden;
+			position: relative;
+		}
+		&.is--padding-top{
+			padding-top: 20px;
+		}
+		//index
+		&.is--video-index{
+			@media @media-point-screen {
+				padding-bottom: 2.2vw;
+			}
+		}
+		&.is--for-you{
+			@media @media-point-screen {
+				padding-top: 4.5vw;
+				padding-bottom: 6.4vw;
+			}
+		}
+		&.is--save-time{
+			@media @media-point-screen {
+				padding-top: 13.2vw;
+				padding-bottom: 0;
+			}
+		}
+		&.is--create-meeting{
+			padding-bottom: 0;
+			@media @media-point-screen-lg {				
+				position: absolute;
+				top: 13.3%;
+				left: 53.8vw;
+				width: 36vw;
+				max-width: 680px;
+				min-width: 500px;
+				padding: 0;
+			}
+		}
+		&.is--explore{
+			position: relative;
+			@media @media-point-screen {
+				padding-top: 5.5vw;
+				padding-bottom: 3.5vw;
+			}
+			@media @media-point-xxl {
+				max-width: 100%;
+				width: 100%;
+				padding-left: 5.5vw;
+				padding-right: 5.5vw;	
+			}		
+		}
+		&.is--who-choose{
+			padding-top: 0px;
+			@media @media-point-screen {
+				padding-top: 4.5vw;
+				padding-bottom: 10.2vw;
+			}
+		}
+		&.is--philosophy{
+			@media @media-point-notsmart {
+				padding-top: 14.5vw;
+				padding-bottom: 12vw;
+			}
+		}
+		&.is--reviews{
+			@media @media-point-notsmart {
+				padding-top: 6.5vw;
+				padding-bottom: 8vw;
+			}
+		}
+		&.is--contacts{
+			@media @media-point-notsmart {
+				padding-top: 11.3vw;
+				padding-bottom: 10.7vw;
+			}
+		}
+	}
+	&elem{
+		margin-bottom: 35px;
+		@media @media-point-screen {
+			margin-bottom: 3.8vw;
+		}
+		&.is--posr{
+			position: relative;
+		}
+		&.is--hidden{
+			overflow: hidden;
+		}
+		&.is--center{
+			text-align: center;
+		}
+		&:last-child{
+			margin-bottom: 0;
+		}
+		&.is--lg{
+			margin-bottom: 25px;
+			@media @media-point-screen {
+				margin-bottom: 2.3vw;
+			}
+		}
+		&.is--xs{
+			margin-bottom: 25px;			
+		}
+		&.is--tabs{
+			margin-bottom: 0;
+			@media @media-point-screen-lg {
+				margin-bottom: 2.3vw
+			}
+		}
+		&.is--save-time{
+			padding-bottom: 35px;
+			@media @media-point-screen {
+				border-left: 2px solid @white;
+				padding-left: 6.4vw;
+				padding-bottom: 12.2vw;
+			}
+		}
+		&.is--explore{
+			max-width: 450px;
+			width: 100%;
+			position: relative;
+			margin: 0 auto;
+			@media @media-point-notsmart {
+				margin: 0;
+				max-width: 930px;
+				min-width: 430px;
+				width: 49vw;				
+			}
+		}
+		&.is--who-choose{
+			&.is--inner{
+				@media @media-point-notsmart {
+					padding-top: 4.5vw; 
+				}
+				@media @media-point-screen-lg {
+					max-width: 720px;
+				}
+			}
+		}
+		&.is--philosophy{
+			@media @media-point-notsmart {
+			//@media @media-point-screen {
+			    margin-left: auto;
+    			max-width: 495px;
+			}
+		}
+		&.is--contacts{
+			max-width: 1220px;
+			margin: 0 auto;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			padding: 25px 25px;
+			box-shadow: 10px 13px 40px 0 fadeout(@blue, 55%);
+			border-radius: 5px;
+				
+			@media @media-point-smart {
+				position: relative;
+				//text-align: center;
+				max-width: 500px;
+				&::before{
+					content: '';
+					position: absolute;
+					z-index: 0;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background-color: fadeout(@white, 50%);
+				}
+			}
+			@media @media-point-screen {
+				padding: 6.5vw;
+			}
+		}
+	}
+	&row{
+		&.is--for-you{
+			@gutter: 25px;
+			@media @media-point-xxl {
+				margin-left: -(@gutter);
+				margin-right: -(@gutter);
+				& > .cols{
+					padding-left: @gutter;
+					padding-right: @gutter;
+
+				}
+			}
+		}
+	}		  
+	&cols{
+		&.is--elem-1{
+			.makeCols(12, 12);
+		}
+		&.is--elem-3{
+			.makeCols(12, 12);
+			@media @media-point-xs {
+				.makeCols(6, 12);
+			}
+			@media @media-point-tablet {
+				.makeCols(6, 12);
+			}
+			@media @media-point-screen {
+				.makeCols(4, 12);
+			}
+		}
+		&.is--elem-4{
+			.makeCols(12, 12);
+			@media @media-point-xs {
+				.makeCols(6, 12);
+			}
+			@media @media-point-sm {
+				.makeCols(6, 12);
+			}
+			@media @media-point-md {
+				.makeCols(3, 12);
+			}
+			@media @media-point-screen {
+				.makeCols(3, 12);
+			}
+		}
+		&.is--elem-6{
+			.makeCols(12, 12);
+			@media @media-point-screen {
+				.makeCols(6, 12);
+			}
+		}
+	}
+	&heading{
+		h3&{
+			margin-bottom: 30px;
+			@media @media-point-screen {
+				margin-bottom: 1.8vw;
+			}			
+		}
+		h4&{
+			margin-bottom: 15px;
+			@media @media-point-screen {
+				margin-bottom: 1.3vw;
+			}
+		}
+		h5&{
+			font-weight: 700;
+			margin-bottom: 15px;
+			@media @media-point-screen {
+				margin-bottom: 1vw;
+			}
+		}
+		&.is--center{
+			text-align: center;
+		}
+		&.is--for-you{
+			color: @b-color-a;			
+			.calcFontSize(26, 34, 320, 1680);
+			.calcLineHeight(32, 40, 320, 1680);
+		}
+	}
+	&text{
+		&.is--center{
+			text-align: center;
+		}
+		&.is--save-time{
+			color: @white;
+			.calcFontSize(18, 23, 320, 1680);
+			.calcLineHeight(26, 45, 320, 1680);
+			//@media @media-point-notsmart {
+				max-width: 490px;
+				min-width: 350px;
+				width: 26vw;
+			//}
+			img{
+				display: inline-block;
+				margin-right: 20px;
+			}	
+			.is--heading{
+				padding-top: 25px;
+				margin-bottom: 30px;
+			}		
+		}
+		&.is--explore{
+			color: @b-color-h;
+			.calcFontSize(16, 23, 320, 1680);
+			.calcLineHeight(24, 33, 320, 1680);
+			&.is--abs{
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				text-align: center;
+				max-width: 450px;
+				width: 100%;
+				padding-left: 80px;
+				padding-right: 40px;
+				@media @media-point-notsmart {
+					min-width: 430px;	
+					max-width: 930px;
+					width: 49vw;				
+				}
+				@media @media-point-screen {					
+					padding-left: 5.3vw;
+				}
+			}
+			&.is--text{
+				max-width: 410px;
+				margin: 0 auto;
+			}
+		}
+		&.is--philosophy{
+			font-size: @b-fs + 2;
+			line-height: @b-lh + 4;
+			h2, h3, h4, h5, h6{
+				color: @green-80;
+			}
+		}
+	}
+	&preview{
+	}
+	&slick{
+		&.is--reviews{
+			padding-top: 22px;
+		}
+	}
+	&slick-item{
+		&.is--reviews{
+			padding: 0 15px;
+		}
+	}
+	&btn-group{
+		&.is--who-choose{
+			//padding-top: 30px;
+			@media @media-point-screen {
+				padding-top: 1.5vw;
+			}
+		}
+	}
+	&btn{
+		padding-top: 35px;
+		@media @media-point-screen-lg {
+			padding-top: 3vw;
+		}
+		&.is--pt0{
+			padding-top: 0;
+		}
+		&.is--center{
+			text-align: center;
+		} 
+	}
+	&video{
+		max-width: 737px;
+		max-height: 620px;
+	    width: 96.089vw;
+		height: 80.835vw;
+		margin: 0 0 0 -5px;
+		position: relative;
+		z-index: 3;
+		@media @media-point-notsmart {
+			margin: 0 auto;
+			max-width: 1010px;
+			max-height: 850px;
+			width: 52.605vw;
+			height: 43.490vw;			
+		}
+	}
+	&video-bg{
+		position: relative;
+		z-index: 1;
+	}
+	&video-player{
+		position: absolute;
+		z-index: 2;
+		max-width: 663px;
+		max-height: 373px;
+		top: 4.8%;
+		left: 5%;
+		width: 86.441vw;
+		height: 48.632vw;
+		@media @media-point-notsmart {
+			max-width: 910px;
+			max-height: 511px;
+			width: 47.396vw;
+			height: 26.615vw;			
+		}
+	}
+}

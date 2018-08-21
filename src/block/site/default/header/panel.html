@@ -1,0 +1,67 @@
+<header class="{{block_prefix}}block"  style="background-image: url({{block_bg}});">
+	<div class="container {{block_prefix}}container">
+		<div class="{{block_prefix}}row row  is--aic  is--gutter  is--wrap">
+			<div class="{{block_prefix}}cols cols  is--slider">
+				<div class="{{block_prefix}}slider" data-slider-slick="slick-header">
+					<div class="{{block_prefix}}slider-item" >
+						<img src="{{url-path-img}}/temp/header-slider-item1.png" class="img-responsive" alt="">
+					</div>
+					<div class="{{block_prefix}}slider-item" >
+						<img src="{{url-path-img}}/temp/header-slider-item2.png" class="img-responsive" alt="">
+					</div>
+					<div class="{{block_prefix}}slider-item" >
+						<img src="{{url-path-img}}/temp/header-slider-item3.png" class="img-responsive" alt="">
+					</div>
+					<div class="{{block_prefix}}slider-item" >
+						<img src="{{url-path-img}}/temp/header-slider-item4.png" class="img-responsive" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="{{block_prefix}}cols cols  is--note">				
+				[[azbntple 
+					tpl="/src/block/site/default/bg/card.html"
+					block_prefix="bg-block__" 
+					block_mod="is--bg-crossline-880x150"
+					block_bg="bg-crossline-880x150.png"
+				]]
+				<div class="{{block_prefix}}panel">
+					<div class="{{block_prefix}}inner">
+						<h1 class="{{block_prefix}}heading">{{block_heading}}</h1>
+						<div class="{{block_prefix}}heading-small">{{block_heading_small}}</div>						
+					</div>
+					<div class="{{block_prefix}}btn-group  {{content_prefix}}btn-group">						
+						<div class="{{content_prefix}}row  row   is--aic  is--wrap  is--gutter15">						
+							<div class="{{content_prefix}}cols cols">				
+								[[azbntple 
+									tpl="/src/block/site/default/button/link-icon-img.html"
+									button_prefix="btn-icon__" 
+									button_mod="is--store  is--icon"
+									button_link="{{contacts.app_link}}"
+									button_icon="{{url-path-img}}/svg/app-store.svg"
+								]]	
+							</div>	
+							<div class="{{content_prefix}}cols cols">				
+								[[azbntple 
+									tpl="/src/block/site/default/button/link-icon-img.html"
+									button_prefix="btn-icon__" 
+									button_mod="is--store  is--icon"
+									button_link="{{contacts.play_link}}"
+									button_icon="{{url-path-img}}/svg/play-store.svg"
+								]]	
+							</div>	
+							<div class="{{content_prefix}}cols cols">				
+								[[azbntple 
+									tpl="/src/block/site/default/button/link.html"
+									button_prefix="btn__" 
+									button_mod="  "
+									button_link="{{contacts.domain_link}}"
+									button_name="{{contacts.domain}}" 
+								]]
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>	
+	</div>	
+</header>

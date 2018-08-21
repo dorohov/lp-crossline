@@ -1,0 +1,83 @@
+<nav class="{{class}} navbar {{navbar_mod}}">
+	<div class="{{navbar_prefix}}inner">
+		<div class="container {{navbar_prefix}}container">
+			<div class="{{navbar_prefix}}header">
+				<div class="row {{navbar_prefix}}row-header ">
+					<div class="cols {{navbar_prefix}}cols-header  is--brand">
+						<a class="{{navbar_prefix}}brand  {{navbar_scrollto}}" href="{{page.index}}">
+							[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="logotip" ]]
+						</a>
+					</div>
+					<div class="cols {{navbar_prefix}}cols-header  is--hamburger">
+						<div class="{{navbar_prefix}}hamburger">
+							<button class="{{navbar_prefix}}hamburger-btn hamburger__card" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false" data-toggle-nav=".navbar-site" data-body="html" data-collapse-nav=".navbar__collapse">
+								<span class="hamburger__card-inner">
+									<span class="hamburger__card-line  is--top"></span>
+									<span class="hamburger__card-line  is--center"></span>
+									<span class="hamburger__card-line  is--bottom-left"></span>
+									<span class="hamburger__card-line  is--bottom-right"></span>
+								</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+				
+			<div class="{{navbar_prefix}}collapse" >
+				<div class="{{navbar_prefix}}collapse-inner">	
+					<div class="row {{navbar_prefix}}collapse-row">
+						<div class="cols {{navbar_prefix}}collapse-cols cols  is--left">
+							<a class="{{navbar_prefix}}brand" href="{{page.index}}">
+								[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="logotip" ]]
+							</a> 
+						</div>
+						<div class="cols {{navbar_prefix}}collapse-cols cols  is--right">
+							<ul class="{{navbar_prefix}}nav">	
+								[[azbntple 
+									tpl="/src/block/site/default/navbar/item-scrollto.html" 
+									navbar_prefix="navbar__" 
+									navbar_name="For you" 
+									navbar_link="{{page.for_you}}"
+									navbar_mod="  "
+									navbar_attr="data-scrollto-diff='-62'"
+								]]	
+								[[azbntple 
+									tpl="/src/block/site/default/navbar/item-scrollto.html"  
+									navbar_prefix="navbar__" 
+									navbar_name="Who choose" 
+									navbar_link="{{page.who_choose}}"
+									navbar_mod="  "
+									navbar_attr="data-scrollto-diff='-62'"
+								]]	
+								[[azbntple 
+									tpl="/src/block/site/default/navbar/item-scrollto.html"  
+									navbar_prefix="navbar__" 
+									navbar_name="Philosophy" 
+									navbar_link="{{page.philosophy}}"
+									navbar_mod="  "
+									navbar_attr="data-scrollto-diff='-62'"
+								]]	
+								[[azbntple 
+									tpl="/src/block/site/default/navbar/item-scrollto.html"  
+									navbar_prefix="navbar__" 
+									navbar_name="Reviews" 
+									navbar_link="{{page.reviews}}"
+									navbar_mod="  "
+									navbar_attr="data-scrollto-diff='-62'"
+								]]	
+								[[azbntple 
+									tpl="/src/block/site/default/navbar/item-scrollto.html"  
+									navbar_prefix="navbar__" 
+									navbar_name="Start" 
+									navbar_link="{{page.contacts}}"
+									navbar_mod="  "
+									navbar_attr="data-scrollto-diff='-62'"
+								]]
+							</ul>							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>

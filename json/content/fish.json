@@ -1,0 +1,39 @@
+{
+	"contacts":{
+		"name":"Crossline",
+		"domain":"www.mycl.co.uk",
+		"domain_link":"https://mycl.co.uk/",
+		"color":"#0460a2",
+		"agreement_page":"agreement",
+		"copyright":"Crossline",
+		"email":"oknastory@gmail.com",
+		"phone":" +7 (495) 991-04-30",  
+		"phone_tel":"+74959910430",   
+		"clock":"<p>Пн-Пт: 8:00-17:00. Перерыв 13:00-14:00</p><p>Сб-Вс: выходной</p>", 
+		"address":"г. Москва ул. Бориса Жигуленкова, д.21",
+		"app_link":"",
+		"play_link":""
+	},
+	"soc":{
+		"vk":"https://vk.com/",
+		"fb":"https://www.facebook.com/",
+		"ok":"https://ok.ru/group/",
+		"tw":"https://twitter.com/",
+		"inst":"https://www.instagram.com/"
+	},
+	"page":{
+		"index":"/",
+		"for_you":"block-for-you",
+		"who_choose":"block-who-choose",
+		"philosophy":"block-philosophy",
+		"reviews":"block-reviews",
+		"contacts":"block-contacts",
+		"agreement":"/agreement.html"
+	},	                           
+	"url-path-css":"/css",
+	"url-path-img":"/img",
+	"url-path-js":"/js",
+	"url-path-plugins":"/plugins",
+	"url-path-favicon":"/favicon",
+	"url-path-docs":"/docs"
+}
